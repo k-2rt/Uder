@@ -16,7 +16,12 @@
 		1F3ACA6524B6033A00529E22 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3ACA6424B6033A00529E22 /* Extensions.swift */; };
 		1F3ACA6724B75E8300529E22 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3ACA6624B75E8300529E22 /* SignUpController.swift */; };
 		1F7F3FBD24B9794500691916 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F3FBC24B9794500691916 /* AuthButton.swift */; };
+		1FBC8FC224BAB7D200C4912A /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC8FC124BAB7D200C4912A /* LocationInputActivationView.swift */; };
+		1FBC8FC424BADA3F00C4912A /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC8FC324BADA3F00C4912A /* LocationInputView.swift */; };
+		1FBC8FC624BB0B7C00C4912A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBC8FC524BB0B7C00C4912A /* LocationCell.swift */; };
 		1FD9E8F324B9AC10005E5C67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9E8F224B9AC10005E5C67 /* GoogleService-Info.plist */; };
+		1FD9E8F524B9AF6C005E5C67 /* HomeContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD9E8F424B9AF6C005E5C67 /* HomeContrller.swift */; };
+		1FD9E8F724B9B599005E5C67 /* config.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1FD9E8F624B9B599005E5C67 /* config.yml */; };
 		EBE70F08BB45BB8A9BEB4673 /* Pods_UberCloneApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA8EA7F80174FA7F65B84B0 /* Pods_UberCloneApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +37,12 @@
 		1F3ACA6424B6033A00529E22 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1F3ACA6624B75E8300529E22 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		1F7F3FBC24B9794500691916 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		1FBC8FC124BAB7D200C4912A /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
+		1FBC8FC324BADA3F00C4912A /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
+		1FBC8FC524BB0B7C00C4912A /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		1FD9E8F224B9AC10005E5C67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FD9E8F424B9AF6C005E5C67 /* HomeContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContrller.swift; sourceTree = "<group>"; };
+		1FD9E8F624B9B599005E5C67 /* config.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; name = config.yml; path = ../../../Desktop/config.yml; sourceTree = "<group>"; };
 		2FA8EA7F80174FA7F65B84B0 /* Pods_UberCloneApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberCloneApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		796BF1B6067A581EEEC46FC2 /* Pods-UberCloneApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneApp.release.xcconfig"; path = "Target Support Files/Pods-UberCloneApp/Pods-UberCloneApp.release.xcconfig"; sourceTree = "<group>"; };
 		D02BAEF8F9DA970A47844D84 /* Pods-UberCloneApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneApp.debug.xcconfig"; path = "Target Support Files/Pods-UberCloneApp/Pods-UberCloneApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +102,7 @@
 				1F3ACA5124B4C01F00529E22 /* LaunchScreen.storyboard */,
 				1FD9E8F224B9AC10005E5C67 /* GoogleService-Info.plist */,
 				1F3ACA5424B4C01F00529E22 /* Info.plist */,
+				1FD9E8F624B9B599005E5C67 /* config.yml */,
 			);
 			path = UberCloneApp;
 			sourceTree = "<group>";
@@ -116,6 +127,7 @@
 			children = (
 				1F3ACA6024B4C17400529E22 /* LoginController.swift */,
 				1F3ACA6624B75E8300529E22 /* SignUpController.swift */,
+				1FD9E8F424B9AF6C005E5C67 /* HomeContrller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				1F7F3FBC24B9794500691916 /* AuthButton.swift */,
+				1FBC8FC124BAB7D200C4912A /* LocationInputActivationView.swift */,
+				1FBC8FC324BADA3F00C4912A /* LocationInputView.swift */,
+				1FBC8FC524BB0B7C00C4912A /* LocationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +222,7 @@
 				1FD9E8F324B9AC10005E5C67 /* GoogleService-Info.plist in Resources */,
 				1F3ACA5024B4C01F00529E22 /* Assets.xcassets in Resources */,
 				1F3ACA4E24B4C01D00529E22 /* Main.storyboard in Resources */,
+				1FD9E8F724B9B599005E5C67 /* config.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +278,12 @@
 				1F3ACA6724B75E8300529E22 /* SignUpController.swift in Sources */,
 				1F7F3FBD24B9794500691916 /* AuthButton.swift in Sources */,
 				1F3ACA6124B4C17400529E22 /* LoginController.swift in Sources */,
+				1FBC8FC424BADA3F00C4912A /* LocationInputView.swift in Sources */,
 				1F3ACA4724B4C01D00529E22 /* AppDelegate.swift in Sources */,
+				1FD9E8F524B9AF6C005E5C67 /* HomeContrller.swift in Sources */,
+				1FBC8FC624BB0B7C00C4912A /* LocationCell.swift in Sources */,
 				1F3ACA4924B4C01D00529E22 /* SceneDelegate.swift in Sources */,
+				1FBC8FC224BAB7D200C4912A /* LocationInputActivationView.swift in Sources */,
 				1F3ACA6524B6033A00529E22 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
