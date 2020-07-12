@@ -12,6 +12,7 @@ import Firebase
 class LoginController: UIViewController {
     
     // MARK: - Propeties
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "UBER"
@@ -75,12 +76,20 @@ class LoginController: UIViewController {
         guard let password = passwordTextField.text else { return }
         
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if  let error = error {
+            if let error = error {
                 print("DEBUG: Failed to log user in with error \(error.localizedDescription)")
                 return
             }
             
-            print("Successfully logged user in...")
+            let keyWindow = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    .first?.windows
+                    .filter({$0.isKeyWindow}).first
+            guard let controller = keyWindow?.rootViewController as? HomeController else { return }
+            controller.configureUI()
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
