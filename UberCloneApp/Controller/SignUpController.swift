@@ -8,9 +8,12 @@
 
 import UIKit
 import Firebase
+import GeoFire
 
 class SignUpController: UIViewController {
     // MARK: - Properties
+    
+    private var location = LocationHandler.shared.locationManager.location
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -109,23 +112,20 @@ class SignUpController: UIViewController {
             }
             
             guard let uid = result?.user.uid else { return }
-            
             let values = ["email": email,
                          "fullname": fullname,
                          "accountType": accountTypeIndex] as [String : Any]
             
-            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
+            if accountTypeIndex == 1 {
+                let geoFire = GeoFire(firebaseRef: REF_DRIVER_LOCATIONS)
                 
-                let keyWindow = UIApplication.shared.connectedScenes
-                        .filter({$0.activationState == .foregroundActive})
-                        .map({$0 as? UIWindowScene})
-                        .compactMap({$0})
-                        .first?.windows
-                        .filter({$0.isKeyWindow}).first
-                guard let controller = keyWindow?.rootViewController as? HomeController else { return }
-                controller.configureUI()
-                self.dismiss(animated: true, completion: nil)
+                guard let location = self.location else { return }
+                geoFire.setLocation(location, forKey: uid, withCompletionBlock: { (error) in
+                    self.uploadUserDataAndShowHomeController(uid: uid, values: values)
+                })
             }
+            
+            self.uploadUserDataAndShowHomeController(uid: uid, values: values)
         }
     }
     
@@ -134,6 +134,20 @@ class SignUpController: UIViewController {
     }
     
     // MARK: - Helper Functions
+    
+    func uploadUserDataAndShowHomeController(uid: String, values: [String: Any]) {
+        REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
+            let keyWindow = UIApplication.shared.connectedScenes
+                    .filter({$0.activationState == .foregroundActive})
+                    .map({$0 as? UIWindowScene})
+                    .compactMap({$0})
+                    .first?.windows
+                    .filter({$0.isKeyWindow}).first
+            guard let controller = keyWindow?.rootViewController as? HomeController else { return }
+            controller.configure()
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     func configureUI() {
         view.backgroundColor = .backgroundColor
