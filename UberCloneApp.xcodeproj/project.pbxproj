@@ -15,6 +15,7 @@
 		1F3ACA6124B4C17400529E22 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3ACA6024B4C17400529E22 /* LoginController.swift */; };
 		1F3ACA6524B6033A00529E22 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3ACA6424B6033A00529E22 /* Extensions.swift */; };
 		1F3ACA6724B75E8300529E22 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3ACA6624B75E8300529E22 /* SignUpController.swift */; };
+		1F412BA724BF4F3B002FE060 /* RideActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F412BA624BF4F3B002FE060 /* RideActionView.swift */; };
 		1F6B053E24BC132600D66E16 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B053D24BC132600D66E16 /* LocationHandler.swift */; };
 		1F6B054024BC98D100D66E16 /* DriverAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B053F24BC98D100D66E16 /* DriverAnnotation.swift */; };
 		1F7F3FBD24B9794500691916 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7F3FBC24B9794500691916 /* AuthButton.swift */; };
@@ -39,6 +40,7 @@
 		1F3ACA6024B4C17400529E22 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		1F3ACA6424B6033A00529E22 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1F3ACA6624B75E8300529E22 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		1F412BA624BF4F3B002FE060 /* RideActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideActionView.swift; sourceTree = "<group>"; };
 		1F6B053D24BC132600D66E16 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		1F6B053F24BC98D100D66E16 /* DriverAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAnnotation.swift; sourceTree = "<group>"; };
 		1F7F3FBC24B9794500691916 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				1FBC8FC524BB0B7C00C4912A /* LocationCell.swift */,
 				1FBC8FC124BAB7D200C4912A /* LocationInputActivationView.swift */,
 				1FBC8FC324BADA3F00C4912A /* LocationInputView.swift */,
+				1F412BA624BF4F3B002FE060 /* RideActionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				1FBC8FC624BB0B7C00C4912A /* LocationCell.swift in Sources */,
 				1F6B053E24BC132600D66E16 /* LocationHandler.swift in Sources */,
 				1F3ACA4924B4C01D00529E22 /* SceneDelegate.swift in Sources */,
+				1F412BA724BF4F3B002FE060 /* RideActionView.swift in Sources */,
 				1FA88E5124BB539C0040667F /* User.swift in Sources */,
 				1FA88E4F24BB4B2E0040667F /* Service.swift in Sources */,
 				1FBC8FC224BAB7D200C4912A /* LocationInputActivationView.swift in Sources */,
