@@ -11,6 +11,7 @@ import MapKit
 
 protocol RideActionViewDelegate: class {
     func uploadTrip(_ view: RideActionView)
+    func cancelTrip()
 }
 
 enum RideActionViewConfiguration {
@@ -101,7 +102,7 @@ class RideActionView: UIView {
     private let uberInfoLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "Uber X"
+        label.text = "UberX"
         label.textAlignment = .center
         return label
     }()
@@ -164,6 +165,7 @@ class RideActionView: UIView {
         case .requestRide:
             delegate?.uploadTrip(self)
         case .cancel:
+            delegate?.cancelTrip()
             print("DEBUG: Handle cancel...")
         case .getDirections:
             print("DEBUG: Handle get direction...")
