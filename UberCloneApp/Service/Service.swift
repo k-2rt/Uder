@@ -36,7 +36,7 @@ struct Service {
                 self.fetchUserData(uid: uid, completion: { (user) in
                     var driver = user
                     driver.location = location
-                    comletion(user)
+                    comletion(driver)
                 })
             })
         }
@@ -69,5 +69,16 @@ struct Service {
         let values = ["driverUid": uid,
                      "state": TripState.accepted.rawValue] as [String : Any]
         REF_TRIPS.child(trip.passengerUid).updateChildValues(values, withCompletionBlock: completion)
+    }
+    
+    func observeCurrentTrip(completion: @escaping(Trip) -> Void) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        REF_TRIPS.child(uid).observe(.value) { (snapshot) in
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let uid = snapshot.key
+            let trip = Trip(passengerUid: uid, dictionary: dictionary)
+            completion(trip)
+        }
     }
 }
