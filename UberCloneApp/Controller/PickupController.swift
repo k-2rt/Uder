@@ -106,7 +106,7 @@ class PickupController: UIViewController {
         mapView.setDimensions(height: 270, width: 270)
         mapView.layer.cornerRadius = 270 / 2
         mapView.centerX(inView: view)
-        mapView.centerY(inView: view, constant: -200)
+        mapView.centerY(inView: view, constant: -150)
         
         view.addSubview(pickupLabel)
         pickupLabel.centerX(inView: view)
