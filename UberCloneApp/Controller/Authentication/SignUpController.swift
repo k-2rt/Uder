@@ -143,7 +143,7 @@ class SignUpController: UIViewController {
                     .compactMap({$0})
                     .first?.windows
                     .filter({$0.isKeyWindow}).first
-            guard let controller = keyWindow?.rootViewController as? HomeController else { return }
+            guard let controller = keyWindow?.rootViewController as? ContainerController else { return }
             controller.configure()
             self.dismiss(animated: true, completion: nil)
         }
