@@ -145,6 +145,14 @@ class ContainerController: UIViewController {
     }
 }
 
+// MARK: -　SettingsControllerDelegate
+
+extension ContainerController: SettingsControllerDelegate {
+    func updateUser(_ controller: SettingsController) {
+        self.user = controller.user
+    }
+}
+
 // MARK: -　HomeControllerDelegate
 
 extension ContainerController: HomeControllerDelegate {
@@ -163,7 +171,12 @@ extension ContainerController: MenuControllerDelegate {
             case .yourTrips:
                 break
             case .settings:
-                break
+                guard let user = self.user else { return }
+                let controller = SettingsController(user: user)
+                controller.delegate = self
+                let nav = UINavigationController(rootViewController: controller)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
             case .logout:
                 let alert = UIAlertController(title: nil,
                                           message: "Are you sure you want to log out?",

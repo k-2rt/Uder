@@ -20,13 +20,13 @@ class LocationCell: UITableViewCell {
         }
     }
     
-    private let titleLabel: UILabel = {
+    var titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
-    private let addressLabel: UILabel = {
+    var addressLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
@@ -52,5 +52,4 @@ class LocationCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
