@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F2571D324CC039200D49EAE /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2571D224CC039200D49EAE /* AddLocationController.swift */; };
+		1F2571D524CC7D0900D49EAE /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2571D424CC7D0900D49EAE /* CircularProgressView.swift */; };
 		1F28581B24C734E9002DF80B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F28581A24C734E9002DF80B /* MenuController.swift */; };
 		1F28581D24C7350B002DF80B /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F28581C24C7350B002DF80B /* ContainerController.swift */; };
 		1F28581F24C7EE36002DF80B /* MenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F28581E24C7EE36002DF80B /* MenuHeader.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1F2571D224CC039200D49EAE /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
+		1F2571D424CC7D0900D49EAE /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		1F28581A24C734E9002DF80B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		1F28581C24C7350B002DF80B /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		1F28581E24C7EE36002DF80B /* MenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeader.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				1F412BA624BF4F3B002FE060 /* RideActionView.swift */,
 				1F28581E24C7EE36002DF80B /* MenuHeader.swift */,
 				1F28582224CB3BAE002DF80B /* UserInfoHeader.swift */,
+				1F2571D424CC7D0900D49EAE /* CircularProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				1FD979B424C2C9AB00FE87E6 /* PickupController.swift in Sources */,
 				1F6B054024BC98D100D66E16 /* DriverAnnotation.swift in Sources */,
 				1F3ACA4724B4C01D00529E22 /* AppDelegate.swift in Sources */,
+				1F2571D524CC7D0900D49EAE /* CircularProgressView.swift in Sources */,
 				1FD9E8F524B9AF6C005E5C67 /* HomeContrller.swift in Sources */,
 				1F2571D324CC039200D49EAE /* AddLocationController.swift in Sources */,
 				1FBC8FC624BB0B7C00C4912A /* LocationCell.swift in Sources */,
