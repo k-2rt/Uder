@@ -14,17 +14,28 @@ class MenuHeader: UIView {
     
     private let user: User
     
-    private let profileImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.backgroundColor = .lightGray
-        return iv
+    private lazy var profileImageView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .black
+        view.addSubview(initialLabel)
+        initialLabel.centerX(inView: view)
+        initialLabel.centerY(inView: view)
+        
+        return view
+    }()
+    
+    private lazy var initialLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 42)
+        label.textColor = .white
+        label.text = user.firstInitial
+        return label
     }()
     
     private lazy var fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .white
-        label.text = "Kazuma Tsuruta"
         label.text = user.fullname
         return label
     }()
@@ -33,7 +44,6 @@ class MenuHeader: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
-        label.text = "test@gmail.com"
         label.text = user.email
         return label
     }()
@@ -66,8 +76,4 @@ class MenuHeader: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Selectors
-
-    // MARK: - Helper Functions
 }

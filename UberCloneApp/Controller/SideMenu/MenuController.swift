@@ -62,8 +62,6 @@ class MenuController: UITableViewController {
         view.backgroundColor = .white
         configureTableView()
     }
-    
-    // MARK: - Selectors
 
     // MARK: - Helper Functions
     
@@ -75,7 +73,6 @@ class MenuController: UITableViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.tableHeaderView = menuHeader
     }
-
 }
 
 extension MenuController {
