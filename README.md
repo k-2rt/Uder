@@ -11,7 +11,17 @@ This is transportation network app.
 - Firebase/Storage
 - GeoFire >= 1.1
 
+# Functions
+- CRUD function
+- Authenticate
+- Search locations
+- Generate a Polyline
+- Set a pin
+- Create a Circular progress bar
+- Slide a menu
+
 # Description
+
 This tool is based on Uber App. <br/>
 Storybord does't use.
 
